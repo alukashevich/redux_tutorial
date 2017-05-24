@@ -1,24 +1,17 @@
 {
-  "name": "redux_tutorial",
+  "name": "redux-ru-tutorial",
   "version": "1.0.0",
-  "description": "my first redux app",
+  "description": "Redux RU tutorial",
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alukashevich/redux_tutorial.git"
-  },
-  "author": "alukashevich",
+  "author": "Maxim Patsianskiy",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alukashevich/redux_tutorial/issues"
-  },
   "devDependencies": {
-    "express": "^4.15.3",
-    "webpack": "^2.6.0",
-    "webpack-dev-middleware": "^1.10.2",
-    "webpack-hot-middleware": "^2.18.0"
+    "express": "^4.13.4",
+    "webpack": "^1.12.12",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.6.4"
   }
 }
