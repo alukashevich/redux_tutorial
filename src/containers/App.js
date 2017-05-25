@@ -4,10 +4,10 @@ import { connect } from 'react-redux'
 class App extends Component {
 
   render() {
-    const {user, page} = this.props.data;
+    const { user, page } = this.props
     return <div>
-      <p>Привет из App, {user.name}!</p>
-      <p>You have {page.photos.length} photos in {page.year}</p>
+      <User name={user.name} />
+      <Page photos={page.photos} year={page.year} />
     </div>
   }
 
@@ -15,7 +15,8 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    data: state
+    user: state.user,
+    page: state.page
   }
 }
 
