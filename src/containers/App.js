@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import User from '../components/User'
-import Page from '../components/Page'
-import * as pageActions from '../actions/PageActions'
+import User from '../components/user.component'
+import Page from '../components/page.component'
+import * as pageActions from '../actions/page.actions'
 
 class App extends Component {
 
