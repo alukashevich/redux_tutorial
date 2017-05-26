@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import User from '../components/user.component'
 import Page from '../components/page.component'
 import * as pageActions from '../actions/page.actions'
+import * as userActions from '../actions/user.actions'
 
 class App extends Component {
 
@@ -11,10 +12,11 @@ class App extends Component {
 
     const { user, page } = this.props
     const { getPhotos } = this.props.pageActions
+    const { handleLogin } = this.props.userActions
 
     return  <div className='row'>
         <Page photos={page.photos} year={page.year} getPhotos={getPhotos} fetching={page.fetching} />
-        <User name={user.name} />
+        <User name={user.name} handleLogin={handleLogin} error={user.error}/>
       </div>
   }
 
@@ -29,7 +31,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    pageActions: bindActionCreators(pageActions, dispatch)
+    pageActions: bindActionCreators(pageActions, dispatch),
+    userActions: bindActionCreators(userActions, dispatch)
   }
 }
 
